@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>△</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div>
+        <img src="LogoTorre.png" alt="" id="fotoTorre">
+        <br>
+        <h1>PROXIMAMENTE</h1>
+        <br>
+        <div id="countdown"></div>
+        <br>
+        <h1>Un laberinto de enigmas sin fin</h1>
+        <br>
+        <a  href="https://www.instagram.com/thetowers13?igsh=amhpdmU5OGtpY2F6&utm_source=qr">
+        <button>Ver más</button>
+        </a>
+    </div>
+</body>
+
+<script>
+    // Configuramos la fecha objetivo
+    const fechaObjetivo = new Date('May 20, 2025 00:00:00').getTime();
+
+    // Actualizamos cada segundo
+    const timer = setInterval(() => {
+        const ahora = new Date().getTime();
+        const diferencia = fechaObjetivo - ahora;
+
+        // Calcular días, horas, minutos y segundos
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        // Mostrar en el div
+        document.getElementById('countdown').innerHTML =
+            `${dias}:${horas}:${minutos}:${segundos}`;
+
+        // Si ya pasó la fecha
+        if (diferencia < 0) {
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = "¡Ya es el lanzamiento!";
+        }
+    }, 1000);
+</script>
+
+</html>

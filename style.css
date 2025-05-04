@@ -1,0 +1,67 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #12102c; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+div {
+    max-width: 600px;
+}
+
+img {
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
+    margin: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fotoTorre {
+    max-width: 100px;
+}
+
+#countdown {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #cfcece; 
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+button {
+    background-color: #707070;
+    color: #0e0e0e;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #8f8f8f;
+    transform: scale(1.05);
+}
